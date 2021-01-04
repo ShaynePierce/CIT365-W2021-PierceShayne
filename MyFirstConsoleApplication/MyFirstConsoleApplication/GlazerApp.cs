@@ -12,6 +12,8 @@ namespace MyFirstConsoleApplication
         {
             double width, height, woodLength, glassArea;
             string widthString, heightString;
+            Console.WriteLine(" ");
+            Console.WriteLine("We will calculate the lumber and glass needed for a window. ");
             Console.WriteLine("Please enter the width: ");
             widthString = Console.ReadLine();
             width = double.Parse(widthString);
@@ -24,6 +26,7 @@ namespace MyFirstConsoleApplication
             woodLength + " feet");
             Console.WriteLine("The area of the glass is " +
             glassArea + " square metres");
+            Console.WriteLine(" ");
         }
     }
 }

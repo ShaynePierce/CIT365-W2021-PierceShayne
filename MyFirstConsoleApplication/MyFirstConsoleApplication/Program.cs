@@ -16,6 +16,8 @@ namespace MyFirstConsoleApplication
             Console.WriteLine($"Hi {person.name}! Where are you from? ");
             person.location = Console.ReadLine();
             Console.WriteLine($"I have never been to {person.location}. I bet it is nice. Press any key to continue...");
+            Console.WriteLine("");
+            Console.ReadKey();
         }
 
         static void ChristmasCountdown(DateTime MyDateTime)
@@ -23,7 +25,9 @@ namespace MyFirstConsoleApplication
             Console.WriteLine($"Today's date is: {MyDateTime:g}");
             int DaysUntilChristmas = ((TimeSpan) (new DateTime(MyDateTime.Year, 12, 25) - MyDateTime)).Days;
             Console.WriteLine($"There are {DaysUntilChristmas} days until Christmas!");
-
+            Console.WriteLine("Press any key to continue...");
+            Console.WriteLine("");
+            Console.ReadKey();
         }
 
         static void Main(string[] args)
@@ -31,7 +35,7 @@ namespace MyFirstConsoleApplication
             GetUserNameAndLocation();
             ChristmasCountdown(DateTime.Now);
             GlazerApp.RunExample();
-            Console.WriteLine("Press any key to terminate...");
+            Console.WriteLine("Press any key to end program...");
             Console.ReadKey();
         }
 
