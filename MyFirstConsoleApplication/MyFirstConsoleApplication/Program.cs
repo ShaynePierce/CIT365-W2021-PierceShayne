@@ -30,7 +30,7 @@ namespace MyFirstConsoleApplication
             Console.ReadKey();
         }
 
-        static void Main(string[] args)
+        static void Main()
         {
             GetUserNameAndLocation();
             ChristmasCountdown(DateTime.Now);
