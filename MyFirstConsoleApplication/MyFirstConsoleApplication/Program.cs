@@ -10,23 +10,24 @@ namespace MyFirstConsoleApplication
     {
         static void GetUserNameAndLocation()
         {
+            //get the user's name and location
             Person person = new Person();
-            Console.WriteLine("What is your name? ");
+            Console.Write("What is your name? ");
             person.name = Console.ReadLine();
-            Console.WriteLine($"Hi {person.name}! Where are you from? ");
+            Console.Write($"Hi {person.name}! Where are you from? ");
             person.location = Console.ReadLine();
-            Console.WriteLine($"I have never been to {person.location}. I bet it is nice. Press any key to continue...");
-            Console.WriteLine("");
+            Console.WriteLine($"I have never been to {person.location}. I bet it is nice. ");
+            Console.Write("Press any key to continue... \n");
             Console.ReadKey();
         }
 
-        static void ChristmasCountdown(DateTime MyDateTime)
+        static void ChristmasCountdown(DateTime myDateTime)
         {
-            Console.WriteLine($"Today's date is: {MyDateTime:g}");
-            int DaysUntilChristmas = ((TimeSpan) (new DateTime(MyDateTime.Year, 12, 25) - MyDateTime)).Days;
-            Console.WriteLine($"There are {DaysUntilChristmas} days until Christmas!");
-            Console.WriteLine("Press any key to continue...");
-            Console.WriteLine("");
+            //show the date and calculate the number of days to Christmas of the same year
+            Console.WriteLine($"Today's date is: {myDateTime:d}");
+            int daysUntilChristmas = ((TimeSpan) (new DateTime(myDateTime.Year, 12, 25) - myDateTime)).Days;
+            Console.WriteLine($"There are {daysUntilChristmas} days until Christmas! ");
+            Console.WriteLine("Press any key to continue...\n");
             Console.ReadKey();
         }
 
@@ -35,9 +36,10 @@ namespace MyFirstConsoleApplication
             GetUserNameAndLocation();
             ChristmasCountdown(DateTime.Now);
             GlazerApp.RunExample();
-            Console.WriteLine("Press any key to end program...");
+
+            //promt the user before exiting the program
+            Console.WriteLine("\nPress any key to end program...");
             Console.ReadKey();
         }
-
     }
 }

@@ -8,6 +8,7 @@ namespace MyFirstConsoleApplication
 {
     class Person
     {
+        //simple class with only two string elements
         public string name;
         public string location;
     }
