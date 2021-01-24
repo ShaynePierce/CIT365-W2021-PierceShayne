@@ -81,7 +81,7 @@ namespace MegaDesk_Pierce
         private void ButtonMainMenu_Click(object sender, EventArgs e)
         {
             Application.OpenForms[0].Show();
-            this.Close();
+            Close();
         }
 
         private void ButtonDisplayQuote_Click(object sender, EventArgs e)
@@ -95,7 +95,7 @@ namespace MegaDesk_Pierce
                     DeskQuote myQuote = new DeskQuote(myDesk, ComboBoxRushOrder.Text, TextBoxCustomerName.Text, DateTimePickerOrderDate.Value);
                     displayQuote.MyDeskQuote = myQuote;
                     displayQuote.Show();
-                    this.Close();
+                    Close();
                 }
                 catch (Exception)
                 {

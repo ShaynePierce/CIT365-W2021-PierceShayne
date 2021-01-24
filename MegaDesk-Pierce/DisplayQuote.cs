@@ -24,16 +24,7 @@ namespace MegaDesk_Pierce
         private void ButtonMainMenu_Click(object sender, EventArgs e)
         {
             Application.OpenForms[0].Show();
-            this.Close();
-        }
-
-        private void DisplayQuote_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (e.CloseReason == CloseReason.UserClosing)
-            {
-                e.Cancel = true;
-            }
-
+            Close();
         }
 
         private void DisplayQuote_Load(object sender, EventArgs e)

@@ -482,7 +482,6 @@ namespace MegaDesk_Pierce
             this.Name = "DisplayQuote";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Display Quote";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DisplayQuote_FormClosing);
             this.Load += new System.EventHandler(this.DisplayQuote_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

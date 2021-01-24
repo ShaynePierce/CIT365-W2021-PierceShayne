@@ -61,7 +61,6 @@ namespace MegaDesk_Pierce
             this.Name = "SearchQuotes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Search Quotes";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SearchQuotes_FormClosing);
             this.ResumeLayout(false);
 
         }
