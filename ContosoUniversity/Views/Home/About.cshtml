@@ -1,0 +1,43 @@
+﻿@model IEnumerable<ContosoUniversity.Models.SchoolViewModels.EnrollmentDateGroup>
+
+@{
+    ViewData["Title"] = "About Ricks College";
+}
+
+<h1>@ViewData["Title"]</h1>
+<h3 class="mt-5">Website Developer</h3>
+<p class="mb-1">Shayne Pierce</p>
+<p><a href="mailto:shayne.pierce@byui.edu">shayne.pierce@byui.edu</a></p>
+<hr />
+<h3 class="mt-5">Student Body Statistics</h3>
+<table class="table table-responsive">
+    <tr>
+        <th>
+            Enrollment Date
+        </th>
+        <th>
+            Students
+        </th>
+    </tr>
+    @{ int totalCount = 0;}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.EnrollmentDate)
+            </td>
+            <td>
+                @item.StudentCount
+                @{ totalCount += item.StudentCount;}
+            </td>
+        </tr>
+    }
+    <tr>
+        <th>
+            Total:
+        </th>
+        <th>
+            @totalCount
+        </th>
+    </tr>
+</table>
